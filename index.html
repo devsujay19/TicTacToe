@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>3X3 TIC TAC TOE - The Game</title>
+  </head>
+  <body>
+    <h1>Tic Tac Toe</h1>
+    <div id="game-board">
+      <div class="cell" onclick="makeMove(0)"></div>
+      <div class="cell" onclick="makeMove(1)"></div>
+      <div class="cell" onclick="makeMove(2)"></div>
+      <div class="cell" onclick="makeMove(3)"></div>
+      <div class="cell" onclick="makeMove(4)"></div>
+      <div class="cell" onclick="makeMove(5)"></div>
+      <div class="cell" onclick="makeMove(6)"></div>
+      <div class="cell" onclick="makeMove(7)"></div>
+      <div class="cell" onclick="makeMove(8)"></div>
+    </div>
+    <button onclick="resetGame()" class="reset-btn">Reset Game</button>
+
+    <button
+      title="Double click to Follow devsujay19 (Sujay Mukherjee) on GitHub"
+      ondblclick="myProfileGithub()"
+      class="profile-btn-github"
+    >
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEUAAAAB/lUB/1kAgCsB10gB2kkAWh4B500AWB4AVh0AVBwB91MB8lEB4kwBpTcAmjMAiS4ByEMBrjoAaSMAYCAAPxUAUBsAQxYAEgYAFggAZCEADgUAGgkAHgoAeSkBlTIAMxGynQo6AAACtklEQVR4nO3cbVvTMBSA4ayOvbAhEwTROfX//0rMpRUSaXsSkp2c7rk/sq3N+lxJ2n3AOQAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4OD8+BD5rj6e4VRe61x5QcVeLwJX2eIpbdcEX7FbaAyqOhOaR0DwSmkdC80hoHgnbsdmvX9tvZB8bSPi0Dh2qjVtuGQ71RvapwYR34Qv7WsOWu46GKnxIH5yFT+ELnX7E5dBQR43MwrvwgLs6w5YrndC5Y2MRiyf8L6LyTCyfsLWIeQk343thSxFrJGxrOa0wC712ItZJ6NzXZiJWSthOxMdKCduJWC1hKxHLJFy++aY2ltOKCduIWG8Wei1ELHM7M/i8rB+x1l7Y019Oq85CTztinFD4Q1LCdfmuHLF6Qu2I8UIqTCjaC3u6EcsknPjhUTPiORLqLqeV98KeXsTMhNF1mUqoGfFMCfUiniuh3nJ6hr2wpxNxGw51US+hcyeViD+jbyj71MRvpENuwnN9yh92il141o+iD2UldPfRdXl4x7AT3GZETLyd6ekkzIpoKmFOxIy90NNK6Fx4YkFEYwnTI8YJt7LT6CVMjmguYWpEc7PQS4poMGFaRJMJk/ZEkwlTIhpNmBDRaEJ5xPi3YwN7YS8cwmBEswl/R4y+4tvvip6Xu2vZwVtIKIxoOKEsotmF9A9BxLyE36Lr8qXosBNMR4xnobGEgohlZqFawumIBp8LYxMRjc9Cbzyi4duZF6MRyyRU2gt7YxFN3868GIk4g1noxRGP/16JE5qchd5gxJkk9M+JodPfv2cmXIdHayChO4b/nOTQX/S8hKdDeLhftYb9fpkJDclLaEh8OyPcCw2ZfcLM2xlDLi4hC6k5mc+Fhsw+IQupedzOmLdd7F5bzC8hAAAAAAAAAAAAAAAAAAAAAAAAAODSPQPwvSFu0rymawAAAABJRU5ErkJggg=="
+        class="dp-github"
+      />
+      <text>devsuajy19</text>
+    </button>
+    <button
+      title="Double click to Follow Sujay Mukherjee on Facebook"
+      ondblclick="myProfileFacebook()"
+      class="profile-btn-facebook"
+    >
+      <img
+        src="https://scontent.fccu3-1.fna.fbcdn.net/v/t39.30808-6/348581780_2649566235182318_7197239651510517941_n.jpg?stp=c0.212.526.526a_dst-jpg_p526x296&_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=VoepJilaqDwAX_ArSjs&_nc_ht=scontent.fccu3-1.fna&oh=00_AfAVsfSS5EeFO_Ko2A8LhBfcmvz4ZxIYdh2M9laNgzYkXg&oe=647BA672"
+        class="dp-facebook"
+      />
+      <text class="facebook-profile-name">Sujay Mukherjee</text>
+    </button>
+    <button
+      title="Double click to Follow devsujay19 on Instagram"
+      ondblclick="myProfileInstagram()"
+      class="profile-btn-instagram"
+    >
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEUAAAAB/lUB/1kAgCsB10gB2kkAWh4B500AWB4AVh0AVBwB91MB8lEB4kwBpTcAmjMAiS4ByEMBrjoAaSMAYCAAPxUAUBsAQxYAEgYAFggAZCEADgUAGgkAHgoAeSkBlTIAMxGynQo6AAACtklEQVR4nO3cbVvTMBSA4ayOvbAhEwTROfX//0rMpRUSaXsSkp2c7rk/sq3N+lxJ2n3AOQAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4OD8+BD5rj6e4VRe61x5QcVeLwJX2eIpbdcEX7FbaAyqOhOaR0DwSmkdC80hoHgnbsdmvX9tvZB8bSPi0Dh2qjVtuGQ71RvapwYR34Qv7WsOWu46GKnxIH5yFT+ELnX7E5dBQR43MwrvwgLs6w5YrndC5Y2MRiyf8L6LyTCyfsLWIeQk343thSxFrJGxrOa0wC712ItZJ6NzXZiJWSthOxMdKCduJWC1hKxHLJFy++aY2ltOKCduIWG8Wei1ELHM7M/i8rB+x1l7Y019Oq85CTztinFD4Q1LCdfmuHLF6Qu2I8UIqTCjaC3u6EcsknPjhUTPiORLqLqeV98KeXsTMhNF1mUqoGfFMCfUiniuh3nJ6hr2wpxNxGw51US+hcyeViD+jbyj71MRvpENuwnN9yh92il141o+iD2UldPfRdXl4x7AT3GZETLyd6ekkzIpoKmFOxIy90NNK6Fx4YkFEYwnTI8YJt7LT6CVMjmguYWpEc7PQS4poMGFaRJMJk/ZEkwlTIhpNmBDRaEJ5xPi3YwN7YS8cwmBEswl/R4y+4tvvip6Xu2vZwVtIKIxoOKEsotmF9A9BxLyE36Lr8qXosBNMR4xnobGEgohlZqFawumIBp8LYxMRjc9Cbzyi4duZF6MRyyRU2gt7YxFN3868GIk4g1noxRGP/16JE5qchd5gxJkk9M+JodPfv2cmXIdHayChO4b/nOTQX/S8hKdDeLhftYb9fpkJDclLaEh8OyPcCw2ZfcLM2xlDLi4hC6k5mc+Fhsw+IQupedzOmLdd7F5bzC8hAAAAAAAAAAAAAAAAAAAAAAAAAODSPQPwvSFu0rymawAAAABJRU5ErkJggg=="
+        class="dp-instagram"
+      />
+      <text>devsujay19</text>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

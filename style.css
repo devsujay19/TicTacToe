@@ -1,0 +1,139 @@
+body{
+  background-color: cyan;
+  cursor: cell;
+  user-select: none;
+  font-family: cursive;
+}
+h1 {
+  text-align: center;
+  font-family: cursive;
+  font-weight: lighter;
+}
+
+#game-board {
+  width: 300px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.reset-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-family: cursive;
+  font-size: 20px;
+  box-shadow: 3px 3px 5px lime;
+  border: none;
+  border-radius: 15px;
+  background-color: white;
+  animation-name: bgColorChange;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes bgColorChange{
+  from{
+    background-color: white;
+    animation-duration: 5s;
+    color: black;
+  }
+  to{
+    background: linear-gradient(skyblue, rgb(0, 191, 255));
+    animation-duration: 5s;
+    color: white;
+  }
+}
+.profile-btn-github{
+  position: relative;
+  bottom: 29pc;
+  right: 0pc;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-family: cursive;
+  font-size: 20px;
+  box-shadow: 3px 3px 5px lime;
+  border: none;
+  border-radius: 15px;
+  background-color: #272B33;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+}
+.profile-btn-facebook{
+  position: relative;
+  bottom: 22pc;
+  right: 9.7pc;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-family: cursive;
+  font-size: 20px;
+  box-shadow: 3px 3px 5px lime;
+  border: none;
+  border-radius: 15px;
+  background-color: #1778f2;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+}
+.facebook-profile-name{
+  display: inline-block;
+  cursor: pointer;
+}
+.profile-btn-instagram{
+  position: relative;
+  bottom: 13pc;
+  right: 19.3pc;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-family: cursive;
+  font-size: 20px;
+  box-shadow: 3px 3px 5px lime;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(
+    20deg,
+    #ffdc80 25%,
+    #fcaf45,
+    #f77737,
+    #f56040,
+    #fd1d1d,
+    #e1306c,
+    #c13584,
+    #833ab4,
+    #5b51d8,
+    #405de6
+  );
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+}
+.dp-github{
+  width: 50px;
+  height: 50px;
+  border-radius: 200%;
+  cursor: pointer;
+}
+.dp-facebook{
+  width: 50px;
+  height: 50px;
+  border-radius: 200%;
+  cursor: pointer;
+}
+.dp-instagram{
+  width: 50px;
+  height: 50px;
+  border-radius: 200%;
+  cursor: pointer;
+}
